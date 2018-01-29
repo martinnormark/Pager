@@ -549,7 +549,6 @@ open class PagerController: UIViewController, UIPageViewControllerDataSource, UI
 
 		if activeContentIndex == self.activeContentIndex {
 			DispatchQueue.main.async(execute: {
-				_ in
 
 				self.pageViewController.setViewControllers([viewController!], direction: .forward, animated: false, completion: {
 					(completed: Bool) -> Void in
@@ -560,7 +559,6 @@ open class PagerController: UIViewController, UIPageViewControllerDataSource, UI
 
 			let direction: UIPageViewControllerNavigationDirection = (activeContentIndex < self.activeContentIndex) ? .reverse : .forward
 			DispatchQueue.main.async(execute: {
-				_ in
 
 				self.pageViewController.setViewControllers([viewController!], direction: direction, animated: true, completion: {
 					completed in
@@ -578,7 +576,6 @@ open class PagerController: UIViewController, UIPageViewControllerDataSource, UI
 		} else {
 			let direction: UIPageViewControllerNavigationDirection = (activeContentIndex < self.activeContentIndex) ? .reverse : .forward
 			DispatchQueue.main.async(execute: {
-				_ in
 
 				self.pageViewController.setViewControllers([viewController!], direction: direction, animated: true, completion: {
 					(completed: Bool) -> Void in
